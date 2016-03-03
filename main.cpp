@@ -10,8 +10,8 @@ int main(int argc, char**argv)
 	std::cout << "half precision:sizeof" << sizeof(halfPrecision) << std::endl;
 	std::cout << "half precision:0x"     << std::hex << *(short*)(void*)&halfPrecision << std::dec << std::endl;
 
-	float original[]  = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, };
-	for (unsigned int i = 0;i < 8;i++)
+	float original[]  = {1.0f, 2.0f, 3.0f, 4.0f, 5.0f, 6.0f, 7.0f, 8.0f, 9.0f, 10.0f, 11.0f, 12.0f, 13.0f, 14.0f, 15.0f, 16.0f, };
+	for (unsigned int i = 0;i < 16;i++)
 	{
 		__fp16 stub = original[i];
 		std::cout << original[i] << "  0x" << std::hex << *(short*)&stub << std::dec << std::endl;
