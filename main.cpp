@@ -5,7 +5,7 @@ void float2half(float* src, short* dst, int length);
 int main(int argc, char**argv)
 {
 	std::cout << "Hello World !!" << std::endl;
-	__fp16 halfPrecision = 0.1f;
+	__fp16 halfPrecision = 1.5f;
 	std::cout << "half precision:"       << halfPrecision << std::endl;
 	std::cout << "half precision:sizeof" << sizeof(halfPrecision) << std::endl;
 	std::cout << "half precision:0x"     << std::hex << *(short*)(void*)&halfPrecision << std::dec << std::endl;
