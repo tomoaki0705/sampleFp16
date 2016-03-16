@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 void float2half(float* src, short* dst, int length);
 
@@ -14,7 +15,7 @@ int main(int argc, char**argv)
 	for (unsigned int i = 0;i < 16;i++)
 	{
 		__fp16 stub = original[i];
-		std::cout << original[i] << "  0x" << std::hex << *(short*)&stub << std::dec << std::endl;
+		std::cout << std::setw(2) << original[i] << "  0x" << std::hex << *(short*)&stub << std::dec << std::endl;
 	}
 	return 0;
 }
