@@ -11,7 +11,7 @@ ASM05  = main.c.vfp3-fp16.s
 ASM06  = main.c.vfp3xd-fp16.s
 ASMS   = $(ASM00) $(ASM01) $(ASM02) $(ASM03) $(ASM04) $(ASM05) $(ASM06)
 CC     = gcc
-CFLAGS = -mfp16-format=ieee
+CFLAGS = -mfp16-format=ieee -std=c99
 
 .PHONY: all clean dump
 all: $(TARGET)
