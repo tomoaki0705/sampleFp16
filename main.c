@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-void float2half(float* src, short* dst, int length);
-
 int main(int argc, char**argv)
 {
 	printf("Hello World !!\n");
@@ -14,18 +12,9 @@ int main(int argc, char**argv)
 	for (unsigned int i = 0;i < 16;i++)
 	{
 		__fp16 stub = original[i];
-		printf("% 2d 0x%04x\n", original[i], *(short*)&stub);
+		printf("%2d 0x%04x\n", (int)original[i], *(short*)&stub);
+		
 	}
 	return 0;
-}
-
-void float2half(float* src, short* dst, int length) {
-	const unsigned int cParallel = 1;
-	for (int i = 0; i < length-(cParallel-1); i+=cParallel)
-	{
-		__fp16 stub = (__fp16)src[i];
-		dst[i] = *(short*)&stub;
-	}
-
 }
 
