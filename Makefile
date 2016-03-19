@@ -1,16 +1,16 @@
 TARGET = sampleFp16
-SRC00  = main.cpp
+SRC00  = main.c
 SRCS   = $(SRC00)
 OBJS   = $(SRCS:.cpp=.o)
-ASM00  = main.cpp.none.s
-ASM01  = main.cpp.vfp3.s
-ASM02  = main.cpp.neon.s
-ASM03  = main.cpp.neon-fp16.s 
-ASM04  = main.cpp.vfp4.s
-ASM05  = main.cpp.vfp3-fp16.s
-ASM06  = main.cpp.vfp3xd-fp16.s
+ASM00  = main.c.none.s
+ASM01  = main.c.vfp3.s
+ASM02  = main.c.neon.s
+ASM03  = main.c.neon-fp16.s 
+ASM04  = main.c.vfp4.s
+ASM05  = main.c.vfp3-fp16.s
+ASM06  = main.c.vfp3xd-fp16.s
 ASMS   = $(ASM00) $(ASM01) $(ASM02) $(ASM03) $(ASM04) $(ASM05) $(ASM06)
-CC     = g++
+CC     = gcc
 CFLAGS = -mfp16-format=ieee
 
 .PHONY: all clean dump
