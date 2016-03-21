@@ -55,4 +55,4 @@ $(ASM06): $(SRC00)
 
 
 clean:
-	@$(RM) $(OBJS) $(TARGET)
+	@$(RM) $(OBJS) $(TARGET) $(ASMS)
