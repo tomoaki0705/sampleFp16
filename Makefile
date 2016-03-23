@@ -1,7 +1,7 @@
 TARGET = sampleFp16
 SRC00  = main.c
 SRCS   = $(SRC00)
-OBJS   = $(SRCS:.cpp=.o)
+OBJS   = $(SRCS:.c=.o)
 ASM00  = main.c.none.s
 ASM01  = main.c.vfp3.s
 ASM02  = main.c.neon.s
@@ -21,7 +21,7 @@ $(TARGET): $(OBJS)
 	@echo "Link               : " $@
 	@$(CC) $(CLFAGS) $(LDFLAGS) -o $@ $^
 
-%.o: %.cpp
+%.o: %.c
 	@echo "CC                 : " $<
 	@$(CC) $(CFLAGS) -c $<
 
